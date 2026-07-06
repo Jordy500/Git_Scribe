@@ -13,6 +13,7 @@ except Exception:  # pragma: no cover - if python-dotenv not installed, fallback
 
 @dataclass
 class Config:
+<<<<<<< HEAD
     groq_api_key: Optional[str]
     stt_model: Optional[str]
     llm_model: Optional[str]
@@ -41,3 +42,12 @@ def get_config() -> Config:
     Use `load_config(env_path)` in local dev if you want to load from a `.env` file.
     """
     return load_config()
+=======
+    """Configuration for scribe"""
+    api_key: str = ""
+    language: str = "fr"
+    timezone: str = "UTC"
+    use_gpu: bool = False
+    # feature/prompt-b change: set gpt-4o-mini
+    stt_model: str = "gpt-4o-mini"
+>>>>>>> fbbeda1 (feat(prompt-b): change default STT model to gpt-4o-mini)
