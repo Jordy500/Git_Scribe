@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets
+.env
+.env.*
+
+# Outputs
+output/
+outputs/
+dist/
+build/
+
+# Course PDFs kept local
+/02_TP_scribe_git_github_groq.pdf
+/Fiche_cours_Git.pdf
