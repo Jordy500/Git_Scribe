@@ -28,7 +28,8 @@ def load_config(env_path: Optional[str] = None) -> Config:
         load_dotenv(env_path)
 
     groq_api_key = os.environ.get("GROQ_API_KEY")
-    stt_model = os.environ.get("SCRIBE_STT_MODEL") or os.environ.get("STT_MODEL")
+    # Default to gpt-4o-mini when no env var is provided
+    stt_model = os.environ.get("SCRIBE_STT_MODEL") or os.environ.get("STT_MODEL") or "gpt-4o-mini"
     llm_model = os.environ.get("SCRIBE_LLM_MODEL") or os.environ.get("LLM_MODEL")
 
     return Config(groq_api_key=groq_api_key, stt_model=stt_model, llm_model=llm_model)

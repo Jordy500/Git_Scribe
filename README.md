@@ -52,3 +52,4 @@ python3 -m unittest discover -s src -p "test_*.py" -v
 - `src/scribe/transcription.py` : appel STT Groq.
 - `src/scribe/summary_service.py` : parsing du JSON renvoyé par le LLM.
 - `src/scribe/cli.py` : point d’entrée de la pipeline.
+
